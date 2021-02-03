@@ -1,0 +1,31 @@
+.App {
+  
+}
+
+.container {
+  background: #fff;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  padding-top: 32px;
+  /* display: flex;
+  flex-direction: column-reverse;
+  overflow: auto; */
+  /* height: 700px; */
+}
+
+.masonry {
+  margin: 0 auto;
+}
+
+.card {
+  width: 296px;
+  box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card > img {
+  width: 296px;
+  height: fit-content;
+}
