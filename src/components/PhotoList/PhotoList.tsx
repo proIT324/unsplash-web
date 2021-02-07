@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import InfiniteScroll from "react-infinite-scroller";
+import StackGrid from "react-stack-grid";
 import axios from 'axios';
 import _ from 'lodash';
-// import { Photo } from "../../types"
 import { PhotoListItem, PhotoListProps, PinnedPhotosResponse, SearchPhotosResponse } from "./PhotoList.d"
 import { PhotoItem } from '../PhotoItem';
 
@@ -62,13 +62,14 @@ const PhotoList: React.FC<PhotoListProps> = ({ query }) => {
       pageStart={0}
       loadMore={loadMore}
       hasMore={hasMore}
-      loader={<h4 key={0}>loading...</h4>}
     >
-      {
-        photos.map(({ pinned, ...photo }) => (
-          <PhotoItem key={photo.photoId} photo={photo} pinned={pinned} onPin={onPin} onUnpin={onUnpin} />
-        ))
-      }
+      <StackGrid columnWidth={400} gutterWidth={8} gutterHeight={8}>
+        {
+          photos.map(({ pinned, ...photo }) => (
+            <PhotoItem key={photo.photoId} photo={photo} pinned={pinned} onPin={onPin} onUnpin={onUnpin} />
+          ))
+        }
+      </StackGrid>
     </InfiniteScroll>
   ), [photos, hasMore])
 }
