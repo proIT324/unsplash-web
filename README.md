@@ -43,4 +43,4 @@ REACT_APP_BASE_URL=http://localhost:8080
 
 ### Screenshot
 
-![image](https://i.ibb.co/NCdnJsn/Screen-Shot-2021-02-03-at-6-55-36-AM.png)
+![image](https://i.ibb.co/7gtBTkr/Screen-Shot-2021-02-06-at-6-34-34-PM.png)
